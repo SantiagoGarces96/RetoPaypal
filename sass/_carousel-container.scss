@@ -1,0 +1,27 @@
+.carousel-container {
+  display: flex; // Establece el contenedor como flexbox
+  flex-wrap: wrap; // Permite que los elementos se ajusten a múltiples líneas
+  justify-content: center; // Centra los elementos horizontalmente
+  margin: 0 -10px; // Agrega un margen negativo para compensar el padding en los elementos hijos
+  
+
+  .carousel-card {
+    
+    padding: 40px 20px; // Agrega un padding a los elementos hijos para separarlos
+    flex: 40px 0 calc(33.33% - 20px); // Establece un ancho flexible para los elementos
+    margin-bottom: 20px; // Agrega un margen inferior para separar los elementos verticalmente
+
+    img {
+      max-width: 100%; // Hace que la imagen sea responsiva y se ajuste al ancho del elemento padre
+    }
+  }
+}
+
+// Estilos para dispositivos móviles
+@media (max-width: 767px) {
+  .carousel-container {
+    .carousel-card {
+      flex-basis: calc(50% - 20px); // Establece el ancho de los elementos para dispositivos móviles
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.container {
+    background-color: black;
+    margin: 0 auto; // Centra el contenedor en la página
+  
+    .menu {
+      display: flex; // Establece la lista como flexbox
+      flex-wrap: wrap; // Permite que la lista se ajuste a múltiples líneas
+      justify-content: center; // Centra los elementos horizontalmente
+      padding: 0; // Elimina el padding predeterminado de la lista
+      list-style: none; // Elimina los puntos de la lista
+      text-align: center; // Centra el texto de los elementos de la lista
+  
+      li {
+        color: white;
+        flex: 1 0 100px; // Establece un ancho flexible para los elementos
+        margin: 10px; // Agrega un margen entre los elementos
+      }
+    }
+  }
+  
+  // Estilos para dispositivos móviles
+  @media (max-width: 767px) {
+    .container {
+      .menu {
+        li {
+          flex-basis: calc(50% - 20px); // Establece el ancho de los elementos para dispositivos móviles
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,122 @@
+.container-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .sidebar {
+    padding: 30px;
+    flex: 1;
+    max-width: 300px;
+    background-color: black;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          display: block;
+          padding: 5px;
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 3;
+    background-color: gray;
+
+    h2 {
+      padding: 30px;
+      margin-top: 0;
+    }
+
+    .featured-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .product-card {
+        padding: 10px;
+        width: 15%;
+        border-radius: 8px;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 200px;
+        }
+
+        h3 {
+          margin-bottom: 10px;
+          font-size: 24px;
+        }
+
+        button {
+          width: 100%;
+          display: block;
+          margin: 10px auto;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          background-color: #000;
+          color: #fff;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+
+    .sidebar {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+  }
+
+  .featured-products {
+    .product-card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .featured-products {
+      .product-card {
+        flex-basis: calc(100% - 20px);
+      }
+    }
+  }
+}

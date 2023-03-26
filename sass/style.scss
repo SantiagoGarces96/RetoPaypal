@@ -1,0 +1,13 @@
+@import 'header';
+@import 'container';
+@import 'carousel-container';
+@import 'container-product';
+@import '_payed';
+@import '_error';
+@import '_footer';
+
+*{
+    margin:0 auto;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif ;
+}
